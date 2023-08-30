@@ -7,7 +7,7 @@ particlesJS('particles-js', {
           'value_area': 800
         }
       },
-      'color': { 'value': '#ffffff' },
+      'color': { 'value': '#caada1' },
       'shape': {
         'type': 'circle',
         'stroke': {
@@ -44,7 +44,7 @@ particlesJS('particles-js', {
       'line_linked': {
         'enable': true,
         'distance': 150,
-        'color': '#ffffff',
+        'color': '#caada1',
         'opacity': 0.4,
         'width': 1
       },
