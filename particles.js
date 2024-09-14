@@ -16,7 +16,7 @@ particlesJS('particles-js', {
         },
         'polygon': { 'nb_sides': 5 },
         'image': {
-          'src': 'img/iconmonstr-github-5.svg',
+          'src': 'imgages/iconmonstr-github-5.svg',
           'width': 100,
           'height': 100
         }
