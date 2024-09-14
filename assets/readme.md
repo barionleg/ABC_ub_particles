@@ -17,3 +17,12 @@ fixed are used; relatives blev förrbredd
  bottom: 0px;
  left: 0px;
 }
+
+barcode & d3Э Двиннიтеграхун
+
+to fix more:
+
+	            <!--<div class="col-md-3">
+              <div class=""></i><span class="fa-solid fa-barcode fa-4x"></span></div>
+              <h4 class="mt-4 font-weight-bol">d'bARQcode</h4>
+            </div>-->	
