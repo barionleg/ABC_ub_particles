@@ -148,13 +148,13 @@
   /* customize formbutton here*/     
   formbutton("create", {
     action: "https://formspree.io/f/manwzbay",
-    title: "CONTACTEZ-MOI PAS S.V.P.",
+    title: "CONTACTEZ-MOI",
     fields: [
 		        { 
         type: "name", 
-        label: "Nom et Prénom: non nécessaire", 
+        label: "Nom et Prénom:", 
         name: "name",
-        required: false,
+        required: true,
       },
       { 
         type: "email", 
@@ -164,24 +164,21 @@
       },
 	        { 
         type: "phone", 
-        label: "Numéro de Téléphone: non nécessaire", 
+        label: "Numéro de Téléphone:", 
         name: "phone",
-        required: false,
+        required: true,
       },
       {
         type: "textarea",
         label: "Entrez votre message: ABC",
         name: "message",
       },
-      { type: "submit",
-        label: "SubmITEnvoyeЯR",
-        name:  "submit",
-		}
+      { type: "submit" }      
     ],
     styles: {
       input: {
         borderBottom: "1px solid #CCC",
-        borderLeft: "1px solid #CCC",
+        borderRight: "1px solid #CCC",
         padding: "5px 0"
       },
       submitInput: {padding: "0.75em 1em"}
