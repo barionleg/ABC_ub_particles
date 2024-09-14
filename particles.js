@@ -16,7 +16,7 @@ particlesJS('particles-js', {
         },
         'polygon': { 'nb_sides': 5 },
         'image': {
-          'src': 'imgages/iconmonstr-github-5.svg',
+          'src': 'https://aibolem.github.io/dbrein/FrontEnd/TAR_PARIS.png',
           'width': 100,
           'height': 100
         }
