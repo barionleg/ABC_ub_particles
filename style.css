@@ -152,7 +152,7 @@ footer{
 
 #myBtn{
   display: none;
-  position: relative;
+  position: fixed;
   bottom: 20px;
   left: 40px;
   z-index: 99;
