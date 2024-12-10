@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Bee-Idees kaart</title>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.3.0/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.3.0/dist/MarkerCluster.Default.css" />
+
+<script type='text/javascript' src='https://unpkg.com/leaflet@1.3.1/dist/leaflet.js'></script>
+<script type='text/javascript' src='https://unpkg.com/leaflet.markercluster@1.3.0/dist/leaflet.markercluster.js'></script>
+<script type='text/javascript' src='https://unpkg.com/leaflet.featuregroup.subgroup@1.0.2/dist/leaflet.featuregroup.subgroup.js'></script>
+</head>
+<style>
+.my-custom-counters {
+    padding: 10px 10px;
+    background: #7ab51d;
+    color: #000;
+    font-size: 11px;
+    line-height: 11px;
+    width: 310px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #3A8D45;
+    border-width: 1px;
+    opacity: 0.85;
+}
+.my-custom-counters .ImpactHeader {
+    color: #fff;
+    line-height: 14px;
+   text-align: center;
+   font-weight: 600;
+   margin-bottom: 5px;
+}
+
+.my-custom-counters .ImpactLead {
+font-weight: 500;
+}
+
+.my-custom-counters .ImpactCount {
+    text-align: right;
+    font-weight: 600;
+}
+
+.my-custom-counters .ImpactEnd {
+    font-weight: 500;
+}
+
+.my-custom-counters:empty {
+    display: none;
+}
+</style>
+
+<body>
+<div id="map" style="height: 580px; border: 1px solid #AAA;"></div>
+</body>
+
+<script>
+markers = [
+{
+    "name": "Gouda 3",
+    "lat": 52.021616,
+    "lng": 4.687917, 
+    "marker": "red"
+}
+];
+</script>  
+
+<script>
+var iconBase = 'css\\icons\\';
+// Standard fields
+var groupLabel = [];
+groupLabel[0] = "Red";
+
+var map = L.map('map', {
+center: [52.021616, 4.85],
+zoom: 10
+});
+
+L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>',
+subdomains: ['a', 'b', 'c']
+}).addTo(map);
+
+var mcg = L.markerClusterGroup(),
+group0 = L.featureGroup.subGroup(mcg),
+control = L.control.layers(null, null, { collapsed: false }), i, a, title, m; 
+mcg.addTo(map);
+
+var markerClusters = L.markerClusterGroup();
+
+for (var i = 0; i < markers.length; ++i) {
+var iconName = iconBase + markers[i].marker + ".png";
+var myIcon = L.icon({ iconUrl: iconName, iconAnchor:   [20, 40] }) 
+var popup = '<h2>' + markers[i].name + '</h2>';
+
+var m = L.marker( [markers[i].lat, markers[i].lng], {icon: myIcon, title: markers[i].name} )
+              .bindPopup( popup );
+
+if (markers[i].marker === "red") { m.addTo(group0);} 
+}
+
+control.addOverlay(group0, groupLabel[0]);
+control.addTo(map);
+
+group0.addTo(map); 
+
+map.addLayer(mcg);
+var MyCounters = L.Control.extend({
+    options: {
+        position: 'bottomright'
+    },
+    onAdd: function (map) {
+        return L.DomUtil.create('div', 'my-custom-counters');
+    },
+    setContent: function (content) {
+        this.getContainer().innerHTML = content;
+    }
+});
+myCounters = new MyCounters().addTo(map);
+showCounters();
+
+function showCounters() {
+impact = '<div class="ImpactHeader">TOTAAL GEMETEN IMPACT VAN ALLE PROJECTEN<br>ZICHTBAAR OP DE KAART<br> </div> <div class="undefined"> <table style="width:100%;"> <tr> <td> <div class="ImpactLead">Winst besteed aan kansarmen : </div> </td> <td> <div class="ImpactCount">275 </div> </td> <td> <div class="ImpactEnd">€ (Euro) </div> </td> </tr><tr> <td> <div class="ImpactLead">Toegang tot financiële diensten: </div> </td> <td> <div class="ImpactCount">176 </div> </td> <td> <div class="ImpactEnd">Personen </div> </td> </tr><tr> <td> <div class="ImpactLead">Veilig en gezond voedsel: </div> </td> <td> <div class="ImpactCount">250 </div> </td> <td> <div class="ImpactEnd">Personen </div> </td> </tr></table> </div>'
+myCounters.setContent(impact);
+}
+</script>
+</html>
