@@ -16,7 +16,7 @@ particlesJS('particles-js', {
  },
  'edge': { 'nb_sides': 5 },
  'image': {
- 'src': 'https://barionleg.github.io/Leaflet.ImageOverlay.Rotated/interval.html',
+ 'src': 'https://aibolem.github.io/dbrein/FrontEnd/TAR_PARIS.png',
  'width': 18,
  'height': 18
  }
