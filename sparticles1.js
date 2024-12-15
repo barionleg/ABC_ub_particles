@@ -4,6 +4,7 @@
   //* https://aibolem.github.io/dbrein/img/TAR_PARISი.png        *//
  //* https://aibolem.github.io/dbrein/img/ARg🎨PARIS.png       *//
 //* https://aibolem.github.io/dbrein/img/ARgoPARIS.png        *//
+
 particlesJS('particles-js', {
  'particles': {
  'number': {
@@ -91,8 +92,8 @@ particlesJS('particles-js', {
  'speed': 3
  },
  'repulse': {
- 'distance': 160,
- 'duration': 4
+ 'distance': 140,
+ 'duration': 0.4
  },
  'push': { 'particles_nb': 4 },
  'remove': { 'particles_nb': 2 }
