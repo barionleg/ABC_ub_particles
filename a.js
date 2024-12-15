@@ -24,7 +24,7 @@ particlesJS('particles-js', {
  },
  'edge': { 'nb_sides': 5 },
  'image': {
- 'src': 'https://aibolem.github.io/dbrein/img/TAR_PARISი.png',
+ 'src': 'https://aibolem.github.io/dbrein/img/TAR_PARISu.png',
  'width': 13,
  'height': 13
  }
