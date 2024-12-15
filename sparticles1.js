@@ -2,8 +2,8 @@
     //* avalible shape=image                                       *//
    //* https://aibolem.github.io/dbrein/FrontEnd/img/ARTPARIS.png *//
   //* https://aibolem.github.io/dbrein/img/TAR_PARISი.png        *//
- //* https://aibolem.github.io/dbrein/img/ARg🎨PARIS.png       *//
-//* https://aibolem.github.io/dbrein/img/ARgoPARIS.png        *//
+ //* https://aibolem.github.io/dbrein/img/ARg🎨PARIS.png        *//
+//* https://aibolem.github.io/dbrein/FrontEnd/img/ARgoPARIS.png*//
 
 particlesJS('particles-js', {
  'particles': {
@@ -23,7 +23,7 @@ particlesJS('particles-js', {
  },
  'edge': { 'nb_sides': 5 },
  'image': {
- 'src': 'https://aibolem.github.io/dbrein/img/ARgoPARIS.png',
+ 'src': 'https://aibolem.github.io/dbrein/FrontEnd/img/ARgoPARIS.png',
  'width': 13,
  'height': 13
  }
