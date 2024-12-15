@@ -24,7 +24,7 @@ particlesJS('particles-js', {
  },
  'edge': { 'nb_sides': 5 },
  'image': {
- 'src': 'https://aibolem.github.io/dbrein/FrontEnd/img/github.svg',
+ 'src': 'https://aibolem.github.io/dbrein/FrontEnd/img/32x32.png',
  'width': 13,
  'height': 13
  }
